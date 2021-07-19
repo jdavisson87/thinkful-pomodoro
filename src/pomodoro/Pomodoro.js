@@ -250,9 +250,9 @@ function Pomodoro() {
           </div>
         </div>
       </div>
-      <div>
-        {/* TODO: This area should show only when there is an active focus or break - i.e. the session is running or is paused */}
-        {session ? (
+      {/* TODO: This area should show only when there is an active focus or break - i.e. the session is running or is paused */}
+      {session ? (
+        <div>
           <Timer
             label={session.label}
             timeDuration={
@@ -261,22 +261,22 @@ function Pomodoro() {
             timeRemaining={session.timeRemaining}
             formatTime={formatTime}
           />
-        ) : null}
-        <div className="row mb-2">
-          <div className="col">
-            <div className="progress" style={{ height: '20px' }}>
-              <div
-                className="progress-bar"
-                role="progressbar"
-                aria-valuemin="0"
-                aria-valuemax="100"
-                aria-valuenow={progress} // TODO: Increase aria-valuenow as elapsed time increases
-                style={{ width: `${progress}%` }} // TODO: Increase width % as elapsed time increases
-              />
+          <div className="row mb-2">
+            <div className="col">
+              <div className="progress" style={{ height: '20px' }}>
+                <div
+                  className="progress-bar"
+                  role="progressbar"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  aria-valuenow={progress} // TODO: Increase aria-valuenow as elapsed time increases
+                  style={{ width: `${progress}%` }} // TODO: Increase width % as elapsed time increases
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      ) : null}
     </div>
   );
 }
