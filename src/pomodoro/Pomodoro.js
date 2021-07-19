@@ -60,6 +60,14 @@ function Pomodoro() {
   //const focusDuration = 25;
   const [breakDuration, setBreakDuration] = useState(300);
 
+  // increment/decrement durations
+
+  const timeAdjust = (amount, type) => {
+    type
+      ? setFocusDuration((curr) => curr + amount)
+      : setBreakDuration((curr) => curr + amount);
+  };
+
   /**
    * Custom hook that invokes the callback function every second
    *
@@ -102,7 +110,10 @@ function Pomodoro() {
   // format remaining time
 
   const formatTime = (time) => {
-    const min = Math.floor(time / 60);
+    const min =
+      Math.floor(time / 60) < 10
+        ? `0${Math.floor(time / 60)}`
+        : Math.floor(time / 60);
     const seconds = time % 60 < 10 ? `0${time % 60}` : time % 60;
     return `${min}:${seconds}`;
   };
@@ -121,6 +132,7 @@ function Pomodoro() {
               <button
                 type="button"
                 className="btn btn-secondary"
+                onClick={() => timeAdjust(-300, true)}
                 data-testid="decrease-focus"
               >
                 <span className="oi oi-minus" />
@@ -129,6 +141,7 @@ function Pomodoro() {
               <button
                 type="button"
                 className="btn btn-secondary"
+                onClick={() => timeAdjust(300, true)}
                 data-testid="increase-focus"
               >
                 <span className="oi oi-plus" />
@@ -141,13 +154,14 @@ function Pomodoro() {
             <div className="input-group input-group-lg mb-2">
               <span className="input-group-text" data-testid="duration-break">
                 {/* TODO: Update this text to display the current break session duration */}
-                Break Duration: 05:00
+                Break Duration: {formatTime(breakDuration)}
               </span>
               <div className="input-group-append">
                 {/* TODO: Implement decreasing break duration and disable during a focus or break session*/}
                 <button
                   type="button"
                   className="btn btn-secondary"
+                  onClick={() => timeAdjust(-60, false)}
                   data-testid="decrease-break"
                 >
                   <span className="oi oi-minus" />
@@ -157,6 +171,7 @@ function Pomodoro() {
                   type="button"
                   className="btn btn-secondary"
                   data-testid="increase-break"
+                  onClick={() => timeAdjust(60, false)}
                 >
                   <span className="oi oi-plus" />
                 </button>
