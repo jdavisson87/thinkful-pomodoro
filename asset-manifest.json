@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/jdavisson87/thinkful-pomodoro/static/css/main.cb9e985a.chunk.css",
-    "main.js": "/jdavisson87/thinkful-pomodoro/static/js/main.1d044235.chunk.js",
-    "main.js.map": "/jdavisson87/thinkful-pomodoro/static/js/main.1d044235.chunk.js.map",
-    "runtime-main.js": "/jdavisson87/thinkful-pomodoro/static/js/runtime-main.9534df7f.js",
-    "runtime-main.js.map": "/jdavisson87/thinkful-pomodoro/static/js/runtime-main.9534df7f.js.map",
-    "static/js/2.0acf020f.chunk.js": "/jdavisson87/thinkful-pomodoro/static/js/2.0acf020f.chunk.js",
-    "static/js/2.0acf020f.chunk.js.map": "/jdavisson87/thinkful-pomodoro/static/js/2.0acf020f.chunk.js.map",
-    "index.html": "/jdavisson87/thinkful-pomodoro/index.html",
-    "precache-manifest.be6dd69ce81f6ece456d1bf974bae224.js": "/jdavisson87/thinkful-pomodoro/precache-manifest.be6dd69ce81f6ece456d1bf974bae224.js",
-    "service-worker.js": "/jdavisson87/thinkful-pomodoro/service-worker.js",
-    "static/css/main.cb9e985a.chunk.css.map": "/jdavisson87/thinkful-pomodoro/static/css/main.cb9e985a.chunk.css.map",
-    "static/js/2.0acf020f.chunk.js.LICENSE.txt": "/jdavisson87/thinkful-pomodoro/static/js/2.0acf020f.chunk.js.LICENSE.txt"
+    "main.css": "/thinkful-pomodoro/static/css/main.cb9e985a.chunk.css",
+    "main.js": "/thinkful-pomodoro/static/js/main.1d044235.chunk.js",
+    "main.js.map": "/thinkful-pomodoro/static/js/main.1d044235.chunk.js.map",
+    "runtime-main.js": "/thinkful-pomodoro/static/js/runtime-main.68054dde.js",
+    "runtime-main.js.map": "/thinkful-pomodoro/static/js/runtime-main.68054dde.js.map",
+    "static/js/2.0acf020f.chunk.js": "/thinkful-pomodoro/static/js/2.0acf020f.chunk.js",
+    "static/js/2.0acf020f.chunk.js.map": "/thinkful-pomodoro/static/js/2.0acf020f.chunk.js.map",
+    "index.html": "/thinkful-pomodoro/index.html",
+    "precache-manifest.abdb7e4b8a83ba6014e78c132902136b.js": "/thinkful-pomodoro/precache-manifest.abdb7e4b8a83ba6014e78c132902136b.js",
+    "service-worker.js": "/thinkful-pomodoro/service-worker.js",
+    "static/css/main.cb9e985a.chunk.css.map": "/thinkful-pomodoro/static/css/main.cb9e985a.chunk.css.map",
+    "static/js/2.0acf020f.chunk.js.LICENSE.txt": "/thinkful-pomodoro/static/js/2.0acf020f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.9534df7f.js",
+    "static/js/runtime-main.68054dde.js",
     "static/js/2.0acf020f.chunk.js",
     "static/css/main.cb9e985a.chunk.css",
     "static/js/main.1d044235.chunk.js"
