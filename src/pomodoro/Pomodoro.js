@@ -243,6 +243,7 @@ function Pomodoro() {
               data-testid="stop"
               title="Stop the session"
               onClick={handleStop}
+              disabled={!session}
             >
               <span className="oi oi-media-stop" />
             </button>
