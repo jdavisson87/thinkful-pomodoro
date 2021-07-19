@@ -154,11 +154,9 @@ function Pomodoro() {
         <div className="col">
           <div className="input-group input-group-lg mb-2">
             <span className="input-group-text" data-testid="duration-focus">
-              {/* TODO: Update this text to display the current focus session duration */}
               Focus Duration: {formatTime(focusDuration)}
             </span>
             <div className="input-group-append">
-              {/* TODO: Implement decreasing focus duration and disable during a focus or break session */}
               <button
                 type="button"
                 className="btn btn-secondary"
@@ -168,7 +166,7 @@ function Pomodoro() {
               >
                 <span className="oi oi-minus" />
               </button>
-              {/* TODO: Implement increasing focus duration  and disable during a focus or break session */}
+
               <button
                 type="button"
                 className="btn btn-secondary"
@@ -185,11 +183,9 @@ function Pomodoro() {
           <div className="float-right">
             <div className="input-group input-group-lg mb-2">
               <span className="input-group-text" data-testid="duration-break">
-                {/* TODO: Update this text to display the current break session duration */}
                 Break Duration: {formatTime(breakDuration)}
               </span>
               <div className="input-group-append">
-                {/* TODO: Implement decreasing break duration and disable during a focus or break session*/}
                 <button
                   type="button"
                   className="btn btn-secondary"
@@ -199,7 +195,7 @@ function Pomodoro() {
                 >
                   <span className="oi oi-minus" />
                 </button>
-                {/* TODO: Implement increasing break duration and disable during a focus or break session*/}
+
                 <button
                   type="button"
                   className="btn btn-secondary"
@@ -236,8 +232,6 @@ function Pomodoro() {
                 })}
               />
             </button>
-            {/* TODO: Implement stopping the current focus or break session. and disable the stop button when there is no active session */}
-            {/* TODO: Disable the stop button when there is no active session */}
             <button
               type="button"
               className="btn btn-secondary"
@@ -251,7 +245,7 @@ function Pomodoro() {
           </div>
         </div>
       </div>
-      {/* TODO: This area should show only when there is an active focus or break - i.e. the session is running or is paused */}
+
       {session ? (
         <div>
           <Timer
@@ -259,6 +253,7 @@ function Pomodoro() {
             timeDuration={
               session.label === 'Focusing' ? focusDuration : breakDuration
             }
+            timeRunning={isTimerRunning}
             timeRemaining={session.timeRemaining}
             formatTime={formatTime}
           />
