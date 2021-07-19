@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import classNames from '../utils/class-names';
 import useInterval from '../utils/useInterval';
 import Timer from './Timer';
+import ProgressBar from './ProgressBar';
 
 // These functions are defined outside of the component to insure they do not have access to state
 // and are, therefore more likely to be pure.
@@ -263,16 +264,7 @@ function Pomodoro() {
           />
           <div className="row mb-2">
             <div className="col">
-              <div className="progress" style={{ height: '20px' }}>
-                <div
-                  className="progress-bar"
-                  role="progressbar"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                  aria-valuenow={progress} // TODO: Increase aria-valuenow as elapsed time increases
-                  style={{ width: `${progress}%` }} // TODO: Increase width % as elapsed time increases
-                />
-              </div>
+              <ProgressBar progress={progress} />
             </div>
           </div>
         </div>
