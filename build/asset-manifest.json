@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/thinkful-pomodoro/static/css/main.cb9e985a.chunk.css",
+    "main.js": "/thinkful-pomodoro/static/js/main.1d044235.chunk.js",
+    "main.js.map": "/thinkful-pomodoro/static/js/main.1d044235.chunk.js.map",
+    "runtime-main.js": "/thinkful-pomodoro/static/js/runtime-main.68054dde.js",
+    "runtime-main.js.map": "/thinkful-pomodoro/static/js/runtime-main.68054dde.js.map",
+    "static/js/2.0acf020f.chunk.js": "/thinkful-pomodoro/static/js/2.0acf020f.chunk.js",
+    "static/js/2.0acf020f.chunk.js.map": "/thinkful-pomodoro/static/js/2.0acf020f.chunk.js.map",
+    "index.html": "/thinkful-pomodoro/index.html",
+    "precache-manifest.abdb7e4b8a83ba6014e78c132902136b.js": "/thinkful-pomodoro/precache-manifest.abdb7e4b8a83ba6014e78c132902136b.js",
+    "service-worker.js": "/thinkful-pomodoro/service-worker.js",
+    "static/css/main.cb9e985a.chunk.css.map": "/thinkful-pomodoro/static/css/main.cb9e985a.chunk.css.map",
+    "static/js/2.0acf020f.chunk.js.LICENSE.txt": "/thinkful-pomodoro/static/js/2.0acf020f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.68054dde.js",
+    "static/js/2.0acf020f.chunk.js",
+    "static/css/main.cb9e985a.chunk.css",
+    "static/js/main.1d044235.chunk.js"
+  ]
+}
