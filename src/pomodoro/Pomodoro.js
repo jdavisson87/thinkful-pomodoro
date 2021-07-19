@@ -64,8 +64,20 @@ function Pomodoro() {
 
   const timeAdjust = (amount, type) => {
     type
-      ? setFocusDuration((curr) => curr + amount)
-      : setBreakDuration((curr) => curr + amount);
+      ? setFocusDuration((curr) => {
+          return curr + amount > 3600
+            ? 3600
+            : curr + amount < 300
+            ? 300
+            : curr + amount;
+        })
+      : setBreakDuration((curr) => {
+          return curr + amount > 900
+            ? 900
+            : curr + amount < 60
+            ? 60
+            : curr + amount;
+        });
   };
 
   /**
@@ -107,6 +119,15 @@ function Pomodoro() {
     });
   }
 
+  // Called when stop button is clicked
+
+  const handleStop = () => {
+    setIsTimerRunning(false);
+    setSession(null);
+    setBreakDuration(300);
+    setFocusDuration(1500);
+  };
+
   // format remaining time
 
   const formatTime = (time) => {
@@ -134,6 +155,7 @@ function Pomodoro() {
                 className="btn btn-secondary"
                 onClick={() => timeAdjust(-300, true)}
                 data-testid="decrease-focus"
+                disabled={session}
               >
                 <span className="oi oi-minus" />
               </button>
@@ -143,6 +165,7 @@ function Pomodoro() {
                 className="btn btn-secondary"
                 onClick={() => timeAdjust(300, true)}
                 data-testid="increase-focus"
+                disabled={session}
               >
                 <span className="oi oi-plus" />
               </button>
@@ -163,6 +186,7 @@ function Pomodoro() {
                   className="btn btn-secondary"
                   onClick={() => timeAdjust(-60, false)}
                   data-testid="decrease-break"
+                  disabled={session}
                 >
                   <span className="oi oi-minus" />
                 </button>
@@ -170,8 +194,9 @@ function Pomodoro() {
                 <button
                   type="button"
                   className="btn btn-secondary"
-                  data-testid="increase-break"
                   onClick={() => timeAdjust(60, false)}
+                  data-testid="increase-break"
+                  disabled={session}
                 >
                   <span className="oi oi-plus" />
                 </button>
@@ -209,6 +234,7 @@ function Pomodoro() {
               className="btn btn-secondary"
               data-testid="stop"
               title="Stop the session"
+              onClick={handleStop}
             >
               <span className="oi oi-media-stop" />
             </button>
