@@ -139,6 +139,14 @@ function Pomodoro() {
     return `${min}:${seconds}`;
   };
 
+  // progress
+
+  const progress = session
+    ? session.label === 'Focusing'
+      ? (1 - session.timeRemaining / focusDuration) * 100
+      : (1 - session.timeRemaining / breakDuration) * 100
+    : 0;
+
   return (
     <div className="pomodoro">
       <div className="row">
@@ -261,8 +269,8 @@ function Pomodoro() {
                 role="progressbar"
                 aria-valuemin="0"
                 aria-valuemax="100"
-                aria-valuenow="0" // TODO: Increase aria-valuenow as elapsed time increases
-                style={{ width: '0%' }} // TODO: Increase width % as elapsed time increases
+                aria-valuenow={progress} // TODO: Increase aria-valuenow as elapsed time increases
+                style={{ width: `${progress}%` }} // TODO: Increase width % as elapsed time increases
               />
             </div>
           </div>
